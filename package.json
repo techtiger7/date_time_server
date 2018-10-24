@@ -1,0 +1,18 @@
+{
+  "name": "date-time-server",
+  "version": "0.1.0",
+  "description": "a basic time server",
+  "author": "Tom Dickman",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/techtiger7/date_time_server.git"
+  },
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.0"
+  }
+}
