@@ -13,12 +13,17 @@ const HOST = '0.0.0.0';
 
 app.get("/api/timestamp/:date_string", function(req, res){
   try{
-    const date = (Object.keys(req.params).length === 0) ? new Date() : new Date(req.params.date_string)
+    const date =  new Date(req.params.date_string)
     res.json({"unix": date.getTime(), "utc": date.toUTCString()})
   }
   catch(err) {
-    res.json({"err": err})
+    res.json({"error": "Invalid Value"})
   }
+})
+
+app.get("/api/timestamp", function(req, res){
+  const date = new Date()
+  res.json({"unix": date.getTime(), "utc": date.toUTCString()})
 })
 
 app.listen(PORT, HOST);
